@@ -1,57 +1,111 @@
-Customer Shopping Behavior Analysis
-📌 Project Overview
-This project provides a comprehensive analysis of customer shopping behavior using transactional data from 3,900 purchases. The goal is to uncover insights into spending patterns, customer segments, and product preferences to guide strategic business decisions.
+# 🛍️ Customer Shopping Behavior Analysis
 
-📊 Interactive Dashboard
-Below is a snapshot of the Power BI dashboard created for this analysis. It tracks key performance indicators (KPIs), demographic distributions, and sales trends.
+## 📌 Project Overview
+This project analyzes customer shopping behavior using a dataset of **3,900 transactions**. The objective is to uncover spending patterns, segment customers based on loyalty and demographics, and generate data-driven recommendations to improve subscription rates and overall revenue.
 
-🚀 Key Insights & KPIs
-Total Transactions: 3,900
+---
 
-Average Purchase Value: $59.76
+## 📊 Interactive Dashboard
 
-Average Review Rating: 3.75 / 5.0
+![Dashboard Preview](dashboard.jpg)
 
-Revenue Leader: Male customers ($157,890) vs. Female customers ($75,191).
+> ⚠️ Ensure `dashboard.jpg` is uploaded to the root directory of this repository for the image to display correctly.
 
-Top Sellers: Blouses and Jewelry lead the product catalog with 171 orders each.
+---
 
-Shipping Impact: Express shipping users spend an average of $60.48, which is slightly higher than standard shipping users ($58.46).
+## 🚀 Key Insights & KPIs
+- **Total Transactions:** 3,900  
+- **Average Purchase Value:** $59.76  
+- **Average Review Rating:** 3.75 / 5.0  
 
-🛠️ Tech Stack
-Python (Pandas): For data cleaning, handling 37 missing review ratings, and feature engineering (age grouping).
+### 📈 Business Insights
+- **Revenue by Gender:**  
+  - Male: $157,890  
+  - Female: $75,191  
 
-PostgreSQL: For deep-dive analysis and identifying high-value customer segments.
+- **Top-Selling Categories:**  
+  - Blouses and Jewelry (171 orders each)
 
-Power BI: For building the interactive data visualization dashboard.
+- **Shipping Impact:**  
+  - Express Shipping: $60.48 average spend  
+  - Standard Shipping: $58.46 average spend  
 
-📂 Project Workflow
-1. Data Preparation (Python)
-Handled missing values in the Review Rating column.
+---
 
-Standardized column names to snake_case for database compatibility.
+## 🛠️ Tech Stack
+- **Python (Pandas):** Data cleaning, preprocessing, and feature engineering  
+- **PostgreSQL:** Advanced querying and segmentation analysis  
+- **Power BI:** Interactive dashboard and data visualization  
 
-Binned ages into categories: Young Adult, Middle-aged, Adult, and Senior.
+---
 
-2. SQL Analysis
-Subscription Opportunity: Identified 2,518 repeat buyers (more than 5 purchases) who have not yet signed up for a subscription.
+## 📂 Project Workflow
 
-Customer Loyalty: Segmented the database to find that 79% (3,116) of customers are classified as "Loyal."
+### 1️⃣ Data Preparation (Python)
+- Cleaned dataset by imputing **37 missing review ratings** using category medians  
+- Standardized column names to **snake_case** for database compatibility  
+- Performed feature engineering by creating **age group segments**:
+  - Young Adult  
+  - Middle-aged  
+  - Adult  
+  - Senior  
 
-Discount Strategy: Found that 839 customers used discounts while still spending above the average purchase amount.
+---
 
-3. Visual Storytelling (Power BI)
-   ## 📷 Dashboard Preview
-![Dashboard](dashboard.jpg)
-Created filters for Subscription Status, Gender, and Category.
+### 2️⃣ SQL Analysis
+- **Subscription Opportunity:**  
+  Identified **2,518 repeat buyers** (5+ purchases) who are not subscribed  
 
-Visualized revenue by age group, showing that Young Adults ($62k) and Middle-aged ($59k) are the highest-grossing demographics.
+- **Customer Loyalty:**  
+  Found that **79% (3,116 customers)** are classified as loyal  
 
-💡 Strategic Recommendations
-Target the "Unsubscribed Loyals": Launch a targeted email campaign for the 2,518 repeat buyers to convert them into subscribers.
+- **Behavioral Insights:**  
+  Discovered **839 customers** who used discounts while still spending above average  
 
-Optimize Shipping: Promote "Express Shipping" more aggressively, as these customers tend to have a higher average order value.
+---
 
-Gender-Specific Marketing: Investigate the 2.1x spending gap between Male and Female customers to create more inclusive or targeted marketing for the female segment.
+### 3️⃣ Data Visualization (Power BI)
+- Built an interactive dashboard with:
+  - KPI cards  
+  - Revenue trends  
+  - Customer segmentation visuals  
 
-Review Incentives: Improve the overall rating (3.75) by incentivizing reviews on top-selling products like Blouses and Jewelry.
+- Key findings:
+  - **Young Adults ($62,143)** and **Middle-aged ($59,197)** are top revenue contributors  
+
+- Implemented filters for:
+  - Subscription Status  
+  - Gender  
+  - Product Category  
+
+---
+
+## 💡 Strategic Recommendations
+- **Convert High-Value Customers:**  
+  Target the **2,518 repeat buyers** with personalized subscription campaigns  
+
+- **Promote Express Shipping:**  
+  Encourage usage as it correlates with higher average order value  
+
+- **Gender-Based Marketing:**  
+  Address the **2.1× spending gap** by improving engagement strategies for female customers  
+
+- **Enhance Customer Feedback:**  
+  Increase review ratings by incentivizing feedback on top-selling products  
+
+---
+
+## ▶️ How to Run
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
+
+# Navigate to the project folder
+cd your-repo-name
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch Jupyter Notebook
+jupyter notebook
